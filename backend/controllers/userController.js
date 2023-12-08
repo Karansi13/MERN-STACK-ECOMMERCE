@@ -19,15 +19,15 @@ exports.registerUser = catchAsyncErrors( async(req,res,next)=>{
         }
     });
 
-    // const token = user.getJWToken();
+    const token = user.getJWTToken();
 
-    // res.status(201).json({
-    //     success:true,
-    //     token,
-    // });
+    res.status(201).json({
+        success:true,
+        token,
+    });
     // Instead of writing these many lines we have completed the task in one line
 
-    sendToken(user , 201, res)
+    // sendToken(user , 201, res)
 });
 
 
@@ -55,14 +55,14 @@ exports.loginUser = catchAsyncErrors(async (req,res,next) => {
         return next(new ErrorHandler("Invalid email or password"),401)
     }
 
-    // const token = user.getJWToken(password);
+    const token = user.getJWTToken(password);
 
-    // res.status(200).json({
-    //     success:true,
-    //     token,
-    // });
+    res.status(200).json({
+        success:true,
+        token,
+    });
 
-    sendToken(user,200, res)
+    // sendToken(user,200, res)
 
 });
 
