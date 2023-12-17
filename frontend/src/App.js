@@ -1,6 +1,6 @@
 import './App.css';
 import Header from "./components/layout/Header/Header.js"
-import {Route, BrowserRouter as Routes} from "react-router-dom"
+import{ BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import WebFont from "webfontloader"
 import React from 'react';
 import Footer from './components/layout/Footer/Footer.js'
@@ -17,12 +17,13 @@ React.useEffect(() => {
 },[])
 
   return (
-    <Routes>
+    <Router>
       <Header/>
-      <Home/>
-    {/* <Route exact path='/' element={Home} /> */}
-    <Footer/>
+    <Routes>
+    <Route exact path='/' element={<Home/>} />
     </Routes>
+    <Footer/>
+    </Router>
   );
 }
 

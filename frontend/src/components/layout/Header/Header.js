@@ -1,11 +1,6 @@
-import React from 'react'
-import {ReactNavbar} from "overlay-navbar"
-import logo from "../../../images/logo.png"
-import "./Header.css"
-import { FaSearch } from "react-icons/fa";
-import { FaShoppingCart } from "react-icons/fa";
-import { CgProfile } from "react-icons/cg";
-
+import React from "react";
+import { ReactNavbar } from "overlay-navbar";
+import logo from "../../../images/logo.png";
 
 const options = {
   burgerColorHover: "#eb4034",
@@ -30,26 +25,18 @@ const options = {
   nav4justifyContent: "flex-start",
   link1ColorHover: "#eb4034",
   link1Margin: "1vmax",
-  profileIconUrl: "/login",
   profileIconColor: "rgba(35, 35, 35,0.8)",
-  searchIconColor: "rgba(35, 35, 35,0.8)",
+  searchIconColor: "rgba(35, 35,35,0.8)",
   cartIconColor: "rgba(35, 35, 35,0.8)",
   profileIconColorHover: "#eb4034",
   searchIconColorHover: "#eb4034",
   cartIconColorHover: "#eb4034",
   cartIconMargin: "1vmax",
-  searchIconElement:<FaSearch/>,
-  CartIconElement:<FaShoppingCart/>,
-  ProfileIconElement:<CgProfile/>,
+
 };
 
 const Header = () => {
-  return (
-  <ReactNavbar {...options} />
-  
-  )
-  
+  return <ReactNavbar {...options} />;
 };
 
-
-export default Header
+export default Header;
